@@ -18,7 +18,11 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// http endponits
   implementation 'org.springframework.boot:spring-boot-starter-web'
+	// hot reload
+	implementation 'org.springframework.boot:spring-boot-starter'
+  developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
