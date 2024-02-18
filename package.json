@@ -1,0 +1,19 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dbmate:new": "npx dbmate -d \"db/migrations\" -e \"DB\" new ",
+    "dbmate:up": "npx dbmate -d \"db/migrations\" -e \"DB\" up",
+    "dbmate:rollback": "npx dbmate -d \"db/migrations\" -e \"DB\" rollback"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "fs-extra": "^9.1.0",
+    "mysql": "^2.18.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "dbmate": "^2.5.0"
+  }
+}
