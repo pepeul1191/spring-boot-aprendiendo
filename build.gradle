@@ -23,6 +23,8 @@ dependencies {
 	// hot reload
 	implementation 'org.springframework.boot:spring-boot-starter'
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// templates
+	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
 }
 
 tasks.named('test') {
