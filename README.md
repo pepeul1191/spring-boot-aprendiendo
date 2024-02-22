@@ -11,8 +11,9 @@ Y en otra terminal:
 ### Migraciones
 
     # .env
-    # Configuración de la base de datos MySQL
+    # Configuración de la base de datos MySQL y otros
     DATABASE_URL="mysql://root:123@127.0.0.1:3306/gym_db"
+    ENV="local"
 
 Migraciones con DBMATE - accesos/sqlite3:
 
