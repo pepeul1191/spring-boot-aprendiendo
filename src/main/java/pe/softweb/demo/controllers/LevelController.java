@@ -38,6 +38,7 @@ public class LevelController {
     System.out.println("1 ++++++++++++++");
     System.out.println(parametro);
     System.out.println(envService.get("ENV"));
+    System.out.println(envService.get("BASE_URL"));
     System.out.println("2 ++++++++++++++");
     Optional<Level> level = levelService.getLevelById(id);
     if (level.isPresent()) {

@@ -1,3 +1,3 @@
 <#include "_blank_header.ftl">
-<h1>Hola desde FreeMarker!</h1>
+<div id="root"></div>
 <#include "_blank_footer.ftl">
