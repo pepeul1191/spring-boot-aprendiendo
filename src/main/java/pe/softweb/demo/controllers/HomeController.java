@@ -11,4 +11,10 @@ public class HomeController {
     // model.addAttribute("nombre", valor);
     return "home";
   }
+
+  @GetMapping("/level")
+  public String level(Model model) {
+    // model.addAttribute("nombre", valor);
+    return "level/index";
+  }
 }
