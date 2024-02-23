@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/level")
+// @RequestMapping("/level/")
 public class LevelController {
   private final EnvService envService;
   @Autowired
@@ -24,13 +24,13 @@ public class LevelController {
   }
 
   // Endpoint para listar todos los niveles
-  @GetMapping("/list")
+  @GetMapping("/level/list")
   public ResponseEntity<List<Level>> getAllLevels() {
     List<Level> levels = levelService.getAllLevels();
     return ResponseEntity.ok(levels);
   }
 
-  @GetMapping("/{id}")
+  @GetMapping("/level/{id}")
   public ResponseEntity<?> getLevelById(
     @PathVariable Long id, 
     @RequestParam(defaultValue = "valor_predeterminado") String parametro

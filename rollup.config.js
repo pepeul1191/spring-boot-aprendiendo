@@ -5,6 +5,7 @@ import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import copy from 'rollup-plugin-copy';
+import json from '@rollup/plugin-json';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -25,6 +26,7 @@ const App = {
       }),
       terser(),
       commonjs(),
+      json(),
       css({ 
          output: production ?  'demo.min.css' : 'demo.css'
       }),
@@ -68,6 +70,7 @@ const Error = {
       }),
       terser(),
       commonjs(),
+      json(),
       css({ 
          output: production ?  'error.min.css' : 'error.css'
       }),

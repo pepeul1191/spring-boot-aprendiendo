@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-  @GetMapping({"/", "/contact", "/about"})
+  @GetMapping({"/", "/contact", "/about", "/level"})
   public String index(Model model) {
     // model.addAttribute("nombre", valor);
     return "home";
   }
-
+  /* 
   @GetMapping("/level")
   public String level(Model model) {
     // model.addAttribute("nombre", valor);
     return "level/index";
-  }
+  }*/
 }
