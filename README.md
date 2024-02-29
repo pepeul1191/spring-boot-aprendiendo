@@ -21,6 +21,58 @@ Migraciones con DBMATE - accesos/sqlite3:
     $ npm run dbmate:up
     $ npm run dbmate:rollback
 
+## Diagrama de Clases
+
+
+
+```plantuml
+@startuml
+package Accesos <<Folder>> {
+  class User {
+    - id: INT
+    - user: STRING {50}
+    - password: STRING {50}
+    - activation_key: STRING {25}
+    - image_url: STRING {40}
+    - reset_key: STRING {25}
+    - created_at: DATETIME
+    - updated_at: DATETIME
+    - user_state_id: INT {FK}
+  }
+
+  class UserState {
+    - id: INT
+    - user: STRING {15}
+  }
+
+  class Role {
+    - id: INT
+    - user: STRING {25}
+  }
+
+  class UserRole {
+    - id: INT
+    - user_id: INT {FK}
+    - role_id: INT {FK}
+  }
+}
+
+package Admin <<Folder>> {
+  class Employee {
+    - id: INT
+    - user: STRING {50}
+  }
+}
+
+User -- UserState
+User --* UserRole
+Role --* UserRole
+User -- Employee
+
+@enduml
+
+
+
 ---
 
 ## Fuentes:
