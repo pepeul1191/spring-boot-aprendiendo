@@ -42,12 +42,12 @@ package Accesos <<Folder>> {
 
   class UserState {
     - id: INT
-    - user: STRING {15}
+    - name: STRING {15}
   }
 
   class Role {
     - id: INT
-    - user: STRING {25}
+    - name: STRING {25}
   }
 
   class UserRole {
@@ -70,8 +70,6 @@ Role --* UserRole
 User -- Employee
 
 @enduml
-
-
 
 ---
 
